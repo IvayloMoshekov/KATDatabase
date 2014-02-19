@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="DriversDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" SettingsObjectName="KatDatabaseInfo.Properties.Settings" SettingsPropertyName="DatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Drivers" Member="Drivers">
+    <Type Name="Driver">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IdNumber" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="BirthDate" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DrivingLicenseNumber" Type="System.String" DbType="NChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="DrivingCategories" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DrivingPointsLeft" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PictureLocation" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AddNewDriver" Method="AddNewDriver">
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MiddleName" Parameter="middleName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IdNumber" Parameter="idNumber" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="BirthDate" Parameter="birthDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Country" Parameter="country" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DrivingLicenseNumber" Parameter="drivingLicenseNumber" Type="System.String" DbType="NChar(9)" />
+    <Parameter Name="DrivingCategories" Parameter="drivingCategories" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DrivingPointsLeft" Parameter="drivingPointsLeft" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="PictureLocation" Parameter="pictureLocation" Type="System.String" DbType="NVarChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
